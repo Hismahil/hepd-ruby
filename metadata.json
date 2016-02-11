@@ -1,0 +1,14 @@
+{
+  "name": "hepd-ruby",
+  "version": "0.0.1",
+  "author": "hepd",
+  "summary": "Ruby module install",
+  "license": "Apache 2.0",
+  "source": "https://github.com/Hismahil/hepd-ruby.git",
+  "project_page": "https://github.com/Hismahil/hepd-ruby",
+  "issues_url": "https://github.com/Hismahil/hepd-ruby/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
