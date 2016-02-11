@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ruby
 
 #### Table of Contents
@@ -77,3 +78,6 @@ know what the ground rules for contributing are.
 If you aren't using changelog, put your release notes here (though you should
 consider using changelog). You may also add any additional sections you feel are
 necessary or important to include here. Please use the `## ` header.
+=======
+# hepd-ruby
+>>>>>>> ab664f13e1d30e486db6ee96bd54e9f2069127bb
