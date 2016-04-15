@@ -35,7 +35,37 @@
 #
 # Copyright 2016 Your name here, unless otherwise noted.
 #
-class ruby {
+class ruby(
+	$version,
+	$user,
+) {
 
+	include apt
 
+	Class['apt::update'] -> Class['ruby::dependencies']
+
+	#ruby versions
+	$ruby = ["ruby${version}", "ruby${version}-dev"]
+
+	# install dependencies
+	class { 'ruby::dependencies': }
+
+	# install a repository for source.list
+	apt::ppa { 'ppa:brightbox/ruby-ng': }
+
+	# install rubies
+	package { $ruby:
+		ensure		=> installed,
+		require		=> Class['apt::update']
+	}
+
+	# copy .gemrc
+	if $user != undef{
+		file {
+			"/home/${user}/.gemrc":		# current user
+			ensure  => present,
+			source => 'puppet:///modules/ruby/.gemrc',
+		}
+	}
+		
 }
