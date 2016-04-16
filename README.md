@@ -20,10 +20,12 @@ Just install the following packages: apt, stdlib and this module.
 
 ## Usage
 
+```puppet
 class { 'ruby':
 	version		=> '2.1',
 	user		=> 'vagrant'
 }
+```
 
 ## Limitations
 
